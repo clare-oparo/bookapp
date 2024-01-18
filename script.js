@@ -71,3 +71,10 @@ function addToCart(book) {
     displayCart();
 }
 
+//remove from cart
+
+function removeFromCart(bookId) {
+    cart = cart.filter(item => item.id !== bookId);
+    displayCart();
+}
+
