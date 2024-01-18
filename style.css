@@ -3,3 +3,14 @@
     padding-top: 20px;
     margin-top: 20px;
 }
+
+.book-card{
+    margin-bottom: 20px;
+}
+
+
+.liked {
+    color: #fff;
+    background-color: #4b0082;
+    border-color: #4b0082;
+}
