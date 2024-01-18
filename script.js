@@ -1,3 +1,5 @@
+let cart=[];
+
 document.addEventListener('DOMContentLoaded', function(){
     fetchBooks();
 })
@@ -57,3 +59,15 @@ function setupLikeButtons() {
         });
     });
 }
+
+//all the cart functions: add to cart
+function addToCart(book) {
+    const existingBook = cart.find(item => item.id === book.id);
+    if (existingBook) {
+        existingBook.quantity++;
+    } else {
+        cart.push({ ...book, quantity: 1 });
+    }
+    displayCart();
+}
+
