@@ -2,6 +2,7 @@ let cart=[];
 
 document.addEventListener('DOMContentLoaded', function(){
     fetchBooks();
+    setupSearch()
 })
 
 //fetch from Google Books
@@ -78,3 +79,37 @@ function removeFromCart(bookId) {
     displayCart();
 }
 
+//change quantity
+function updateQuantity(bookId, quantity) {
+    const book = cart.find(item => item.id === bookId);
+    if (book) {
+        book.quantity = quantity;
+        displayCart();
+    }
+}
+
+//display cart
+function displayCart() {
+    const cartDiv = document.getElementById('cart-items');
+    cartDiv.innerHTML = '';
+    cart.forEach(item => {
+        const cartItem = document.createElement('div');
+        cartItem.innerHTML = `
+            <p>${item.title} - ${item.quantity}</p>
+            <button onclick="removeFromCart(${item.id})">Remove</button>
+            <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)">
+        `;
+        cartDiv.appendChild(cartItem);
+    });
+}
+
+//search
+function setupSearch() {
+    document.getElementById('book-search').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        document.querySelectorAll('.book-card').forEach(bookCard => {
+            const title = bookCard.querySelector('.card-title').textContent.toLowerCase();
+            bookCard.style.display = title.includes(searchTerm) ? '' : 'none';
+        });
+    });
+}
