@@ -47,3 +47,13 @@ function displayBooks(books) {
 
     setupLikeButtons();
 }
+
+//like buttons on book cards
+function setupLikeButtons() {
+    document.querySelectorAll('.like-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('liked');
+            this.textContent = this.classList.contains('liked') ? 'Liked' : 'Like';
+        });
+    });
+}
