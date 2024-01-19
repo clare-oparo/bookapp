@@ -1,7 +1,12 @@
+let books = [];
+
 fetch('http://localhost:3000/books')
 .then(response => response.json())
-.then(books => displayBooks(books))
+.then(data => {
+    books = data;
+    displayBooks(books)})
 .catch(error =>console.error('Error occured:', error))
+
 
 function displayBooks(books){
     const row = document.querySelector('#books-container .row'); //container holds all the books
@@ -31,3 +36,18 @@ function displayBooks(books){
         }
     )
 }
+
+document.getElementById('genre-filter').addEventListener('change', function() {
+    applyFilter();
+  });
+
+function applyFilter(){
+    const selectedGenre = document.getElementById('genre-filter').value;
+    let filteredBooks = books;
+    //filter by genre
+    if (selectedGenre !== 'all'){
+        filteredBooks = filteredBooks.filter(book => book.genre===selectedGenre);
+    }
+}
+
+displayBooks(filteredBooks);
