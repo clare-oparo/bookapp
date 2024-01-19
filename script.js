@@ -3,6 +3,7 @@ let cart=[];
 document.addEventListener('DOMContentLoaded', function() {
     fetchBooks("rome"); //default search term
     setupSearch();
+    fetchCart();
 });
 
 function fetchBooks(searchTerm) {
