@@ -1,11 +1,245 @@
-"books": [
+{"books": [
     {
-      "id": "",
-      "title": "",
-      "author": "",
-      "genre": "",
-      "price": "",
-      "description": "",
-      "image": "",
-    }
-  ]
+      "id": "1",
+      "title": "The Bullet Swallower",
+      "author": "Elizabeth Gonzalez James",
+      "genre": "Contemporary & Historical Fiction",
+      "price": "KES 2000",
+      "description": "An early favorite in this year’s Most Compelling Book Title competition, this magical-realism Western from Elizabeth Gonzalez James introduces the legendary bandido El Tragabalas. What starts in 1895 winds up in 1964, when Mexican singer Jaime Sonoro discovers he has inherited his ancestor’s otherworldly problems. Call it Cormac McCarthy meets Gabriel García Márquez.",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1686091900l/123847255.jpg"
+    },
+    {
+        "id": "2",
+        "title": "The Mayor of Maxwell Street",
+        "author": "Avery Cunningham",
+        "genre": "Contemporary & Historical Fiction",
+        "price": "KES 2200",
+        "description": "Set in Prohibition-era Chicago, this extremely buzzy debut from Avery Cunningham is a kind of crime-fiction love story: Born into the Black upper class, reporter Nelly Sawyer is dedicated to exposing injustice in the shadows of Jim Crow America. Teaming with biracial speakeasy manager Jay Shorey, she aims to take down a notorious crime boss. Things get rough.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1681770225l/133206574.jpg"
+      },
+      {
+        "id": "3",
+        "title": "The Women",
+        "author": "Kristin Hannah",
+        "genre": "Contemporary & Historical Fiction",
+        "price": "KES 2600",
+        "description": "",
+        "image": ""
+      },
+      {
+        "id": "4",
+        "title": "The Phoenix Crown",
+        "author": " Katie Quinn and Janie Chang",
+        "genre": "Contemporary & Historical Fiction",
+        "price": "KES 1870",
+        "description": "In 1906 San Francisco, an apocalyptic earthquake brings together four very different women: a botanist, a painter, a singer, and a Chinatown artisan. Six years later, a long quest for justice leads to a mysterious millionaire, an opera costume ball in Paris, and a priceless relic of Beijing’s fallen Summer Palace.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1681768422l/64417401.jpg"
+      },
+      {
+        "id": "5",
+        "title": "Wandering Stars",
+        "author": "Tommy Orange",
+        "genre": "Contemporary & Historical Fiction",
+        "price": "KES 1950",
+        "description": "Native American author Tommy Orange follows up on his 2018 novel, There There—a Pulitzer Prize finalist—with this sprawling new novel, which expands his already vast canvas of story and character. The interconnected narratives begin in 1864 Colorado and fractal out into a multigenerational chronicle of one family’s Cheyenne bloodline and “America’s war on its own people.”",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1695837414l/174147294.jpg"
+      },
+      {
+        "id": "6",
+        "title": "The Great Divide",
+        "author": "Cristina Henríquez",
+        "genre": "Contemporary & Historical Fiction",
+        "price": "KES 2500",
+        "description": "If you are in the market for truly epic historical fiction, the latest from Cristina Henríquez chronicles the construction of the Panama Canal through the stories of a dozen intersecting lives: laborers, doctors, fishermen, soothsayers, and one courageous teenage girl. Bonus trivia: Author Henríquez’s father immigrated to the U.S. from Panama. ",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1701361402l/181110028._SY475_.jpg"
+      },
+      {
+        "id": "7",
+        "title": "James",
+        "author": "Percival Everett",
+        "genre": "Contemporary & Historical Fiction",
+        "price": "KES 2000",
+        "description": "How’s this for a fantastic idea? James, the hugely anticipated new book from acclaimed novelist Percival Everett, is nothing less than a complete reimagining of Mark Twain’s immortal classic The Adventures of Huckleberry Finn. The twist: This time, the story is told from the perspective of Jim, the enslaved runaway who joins Huck on history’s most famous Mississippi adventure.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1704107491l/173754979._SY475_.jpg"
+      },
+      {
+        "id": "8",
+        "title": "The Life Impossible",
+        "author": "Matt Haig",
+        "genre": "Contemporary & Historical Fiction",
+        "price": "KES 2340",
+        "description": "Details are scarce on this new one coming in the summer from Matt Haig, author of 2020’s beloved existential parable The Midnight Library. But advance word suggests more life-affirming conjecture involving an unexpected inheritance, a new house, and a fresh start on life on the beautiful Spanish island of Ibiza. Yes, please.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1694105761l/198281740._SY475_.jpg"
+      },
+      {
+        "id": "9",
+        "title": "The Fury",
+        "author": "Alex Michaelides",
+        "genre": "Mysteries & Thrillers",
+        "price": "KES 2700",
+        "description": "Mystery fans who enjoyed the grim fun of The Silent Patient will be happy to hear that author Alex Michaelides is back patrolling similar twisty terrain. The Fury moves the action to a posh Greek island, where movie star Lana Farrar has gathered all her besties. Murder ensues. Early readers are praising the plot, pacing, and Glass Onion vibe.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1684763144l/123206645.jpg"
+      },
+      {
+        "id": "10",
+        "title": "Only If You Are Lucky",
+        "author": "Stacy Willingham",
+        "genre": "Mysteries & Thrillers",
+        "price": "KES 2450",
+        "description": "Psychological suspense specialist Stacy Willingham (A Flicker in the Dark) returns to explore a Bad Roommate Situation gone nuclear. Shy college sophomore Margot has just moved into off-campus housing with her wild friend Lucy and two other girls. When one of the fraternity boys next door winds up dead, roommate tensions get severe.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1687783124l/60891867._SY475_.jpg"
+      },
+      {
+        "id": "11",
+        "title": "The Mysterious Case of the Alperton Angels",
+        "author": "Janice Hallett",
+        "genre": "Mysteries & Thrillers",
+        "price": "KES 1566",
+        "description": "Eighteen years ago, the Alperton Angels suicide cult made headlines around the world—and an infant mysteriously disappeared. Now true-crime writer Amanda Bailey may have found the Alperton Baby, all grown up, which would be the scoop of the century. Complicating matters: The child may be the anti-Christ. Uh-oh. Janice Hallett (The Appeal) has the infernal details.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1687105185l/176442891.jpg"
+      },
+      {
+        "id": "12",
+        "title": "The Atlas Complex",
+        "author": "Olivie Blake",
+        "genre": "Fantasy",
+        "price": "KES 1800",
+        "description": "The third and reportedly final installment of Olivie Blake’s Atlas series reveals the ultimate fate of the Alexandrian Society, powerful sorcerers who wield the magical knowledge of history’s greatest civilizations. The Six Society recruits must decide what they’re willing to sacrifice for limitless power. The fate of the world, need we add, hangs in the balance. ",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1675187122l/83668117.jpg"
+      },
+      {
+        "id": "13",
+        "title": "The Tainted Cup",
+        "author": "Robert Jackson Bennett",
+        "genre": "Fantasy",
+        "price": "KES 2300",
+        "description": "A classically structured murder mystery set in an innovative fantasy milieu, The Tainted Cup is the first in a new series from genre ace Robert Jackson Bennett, author of the excellent Founders Trilogy series. In Holmes-and-Watson style, genius detective Ana Dolabra and her assistant, Dinios Kol, investigate an impossible murder in an ecologically evolved world.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1689268335l/150247395._SY475_.jpg"
+      },
+      {
+        "id": "14",
+        "title": "The Book of Love",
+        "author": "Kelly Link",
+        "genre": "Fantasy",
+        "price": "KES 2700",
+        "description": "One of the most beloved writers in all of speculative fiction, Kelly Link brings emotional depth and serious literary chops to whatever she chooses to write about. In this case, three teenagers—missing and presumed dead—find themselves dropped back into their old lives. Although they may still be missing. And, in fact, they may still be dead. Intriguing, is it not?",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1695356776l/157981682._SY475_.jpg"
+      },
+      {
+        "id": "15",
+        "title": "A Love Song for Ricki Wilde",
+        "author": "Tia Williams",
+        "genre": "Romance",
+        "price": "KES 1450",
+        "description": "Ricki Wilde, restless daughter of a wealthy Atlanta family, decides to take her chances in New York City, where the spirit of the Harlem Renaissance still lingers. When a handsome stranger sweeps her off her feet, Ricki gets a new perspective on Harlem’s history. Brooklyn author Tia Williams (Seven Days in June) delivers an epic love story with a timely twist.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1688215621l/173404023.jpg"
+      },
+      {
+        "id": "16",
+        "title": "This Could Be Us",
+        "author": "Kennedy Ryan",
+        "genre": "Romance",
+        "price": "KES 2250",
+        "description": "In this stirring new love story from romance great Kennedy Ryan (Before I Let Go), a woman finds her life upended by a monumental betrayal. In its aftermath, Soledad Barnes must keep a roof over her daughters' heads and rediscover herself at the same time. That doesn't leave any time for a hunky (but forbidden!) man to enter the picture—or does it?",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1699034863l/182762109._SY475_.jpg"
+      },
+      {
+        "id": "17",
+        "title": "Womb City",
+        "author": "Tlotlo Tsamaase",
+        "genre": "Sci-Fi",
+        "price": "KES 2800",
+        "description": "In a future Africa where men control women’s bodies via microchip, one desperate woman faces off against cruel systemic inequality—and a vengeful ghost bent on bloody revenge. An early favorite for 2024’s Most Unsettling Cover Art Award, Womb City is the debut adult novel from author Tlotlo Tsamaase.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1701707275l/61725531._SY475_.jpg"
+      },
+      {
+        "id": "18",
+        "title": "In Ascension",
+        "author": "Martin MacInnes",
+        "genre": "Sci-Fi",
+        "price": "KES 1700",
+        "description": "Long-listed for the 2023 Booker Prize, Martin MacInnes' literary sci-fi tale of the ocean's unfathomable depths hits U.S. shores this February. Think Interstellar, but underwater, as a young marine biologist joins a deep-sea expedition in the Atlantic that calls into question everything we know about our own beginnings.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1698177121l/197063361._SY475_.jpg"
+      },
+      {
+        "id": "19",
+        "title": "Baby X",
+        "author": "Kira Peikoff",
+        "genre": "Sci-Fi",
+        "price": "KES 2760",
+        "description": "Ripped straight from science news headlines, the sci-fi thriller Baby X imagines an uncomfortably plausible future. Advances in genetics have spawned a black market for stolen celebrity DNA. Bio-security agent Ember Ryan helps her famous clients by fending off psycho stalkers. But no one is ready for what happens next.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1694109773l/173476065._SY475_.jpg"
+      },
+      {
+        "id": "20",
+        "title": "The House of Last Resort",
+        "author": "Christopher Golden",
+        "genre": "Horror",
+        "price": "Kes 1970",
+        "description": "Perhaps you’ve seen those news reports about remote Italian village homes available for free? Yeah, author Christopher Golden saw those reports, too, and his latest high-concept horror show presents a worst-case scenario: Think creepy villagers, unholy rituals, ancient evil, haunted catacombs, this sort of thing.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1681241011l/126918644.jpg"
+      },
+      {
+        "id": "21",
+        "title": "Island Witch",
+        "author": "Amanda Jayatissa",
+        "genre": "Horror",
+        "price": "KES 2250",
+        "description": "If you’re in the market for atmospheric gothic horror with a feminist twist set in 19th-century Sri Lanka, well, we have a most extraordinary coincidence to report. This historical cautionary tale from author Amanda Jayatissa (You’re Invited) features a courageous young heroine, a supernatural jungle entity, and some grim observations on Western religious hegemony.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1692038732l/157979441._SY475_.jpg"
+      },
+      {
+        "id": "22",
+        "title": "Ghost Station",
+        "author": "S.A. Barnes",
+        "genre": "Horror",
+        "price": "KES 2000",
+        "description": "Connoisseurs of spec-fic microgenres may want to get acquainted with author S.A. Barnes (Dead Silence), who has staked out a nice little specialty in space horror. Her new one, due in July, features a dubious exploration mission, a derelict planet, a missing colony, and a space-based illness that causes unfortunate spells of psychopathic violence.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1684351144l/127280445.jpg"
+      },
+      {
+        "id": "23",
+        "title": "A Tempest of Tea",
+        "author": " Hafsah Faizal",
+        "genre": "Young Adult",
+        "price": "KES 1900",
+        "description": "The first in a new duology from acclaimed author Hafsah Faizal (We Hunt the Flame), the historical fantasy A Tempest of Tea puts a new spin on the old heist-story template. Several spins, actually. Find out what happens when streetwise orphan Arthie Casimir gathers her crew to take down a nest of aristocratic vampires.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1683839282l/59406549.jpg"
+      },
+      {
+        "id": "24",
+        "title": "The Reappearance of Rachel Price",
+        "author": "Holly Jackson",
+        "genre": "Young Adult",
+        "price": "KES 1780",
+        "description": "Here is a pickle: Bels mom, Rachel, disappeared 16 years ago, when Bel was just an infant. During the filming of a true-crime documentary on the case, Mom suddenly reappears with a frankly unbelievable story. Now Bel has to figure out what’s really going on—with the cameras rolling. Uncomfortable! Holly Jackson (A Good Girl's Guide to Murder series) has the details. ",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1692547104l/182484360._SY475_.jpg"
+      },
+      {
+        "id": "25",
+        "title": "Heavenly Tyrant",
+        "author": "Xiran Jay Zhao",
+        "genre": "Young Adult",
+        "price": "KES 2100",
+        "description": "Book No. 2 in the inventive Iron Widow sci-fi/fantasy series, Heavenly Tyrant continues the adventures of young robot pilot Zetian. Now in a position to make a difference, Zetian takes aim at the misogynist superstructure of Huaxia society.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1666660771l/63072380.jpg"
+      },
+      {
+        "id": "26",
+        "title": "Divine Might Goddesses in Greek Myth",
+        "author": "Natalie Haynes",
+        "genre": "Nonfiction",
+        "price": "KES 2300",
+        "description": "It is shaping up to be another bountiful year for nonfiction, starting with this January release from British scholar and mythology specialist Natalie Haynes (A Thousand Ships). Divine Might provides a female-centered look at classical Greek legends and stories, delivered with Haynes’ patented insight and humor. Bonus trivia: Across the pond, Haynes is a celebrity historian. They have those in England.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1694098216l/187016352._SY475_.jpg"
+      },
+      {
+        "id": "27",
+        "title": "My Side of the River",
+        "author": "Elizabeth Camarillo Gutierrez",
+        "genre": "Nonfiction",
+        "price": "KES 2200",
+        "description": "Stranded in Arizona when her immigrant parents were forced back to Mexico, teenage Elizabeth Gutierrez finished school and cared for her younger brother as a homeless student in Tucson. Front-line evidence of a broken immigration system, this debut memoir is recommended for readers of Educated and The Distance Between Us.",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1681802892l/126918693.jpg"
+      }
+  ]}
