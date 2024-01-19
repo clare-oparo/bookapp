@@ -62,7 +62,7 @@ function setupLikeButtons() {
 }
 
 //all the cart functions: add to cart
-function addToCart(book) {
+/*function addToCart(book) {
     const existingBook = cart.find(item => item.id === book.id);
     if (existingBook) {
         existingBook.quantity++;
@@ -71,6 +71,23 @@ function addToCart(book) {
     }
     saveCart();
     displayCart();
+}*/
+function addToCart(book) {
+    fetch('http://localhost:3000/cart', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(book)
+    })
+    .then(response => response.json())
+    .then(() => fetchCart())
+    .catch(error => console.error('Error:', error));
+}
+
+function fetchCart() {
+    fetch('http://localhost:3000/cart')
+        .then(response => response.json())
+        .then(cartItems => displayCart(cartItems))
+        .catch(error => console.error('Error:', error));
 }
 
 //remove from cart
@@ -110,6 +127,25 @@ function displayCart() {
 
 }
 
+/*function displayCart(cartItems) {
+    const cartDiv = document.getElementById('cart-items');
+    cartDiv.innerHTML = '';
+    let totalItems = 0;
+    
+    cartItems.forEach(item => {
+        totalItems += item.quantity;
+        const cartItem = document.createElement('div');
+        cartItem.innerHTML = `
+            <p>${item.title} - ${item.quantity}</p>
+            <button onclick="removeFromCart('${item.id}')">Remove</button>
+            <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
+        `;
+        cartDiv.appendChild(cartItem);
+    });
+
+    document.getElementById('cart-count').textContent = totalItems;
+}*/
+
 
 //search
 function setupSearch() {
@@ -123,3 +159,5 @@ function setupSearch() {
         }
     });
 }
+
+
