@@ -18,6 +18,7 @@ function displayBooks(books){
             <div class="card-body">
                 <h4 class="card-title">${book.title}</h4>
                 <h5 class="card-author">by ${book.author}</h5>
+                <p class="card-genre">${book.genre}</p>
                 <p class="card-description">${book.description}</p>
                 <p class="card-price">${book.price}</>
                 <a href=# class="btn btn-primary">Add to Cart</a>
