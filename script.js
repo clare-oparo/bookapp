@@ -68,6 +68,7 @@ function addToCart(book) {
     } else {
         cart.push({ ...book, quantity: 1 });
     }
+    saveCart();
     displayCart();
 }
 
@@ -90,8 +91,11 @@ function updateQuantity(bookId, quantity) {
 //display cart
 function displayCart() {
     const cartDiv = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
     cartDiv.innerHTML = '';
+    let totalItems = 0;
     cart.forEach(item => {
+        totalItems += item.quantity;
         const cartItem = document.createElement('div');
         cartItem.innerHTML = `
             <p>${item.title} - ${item.quantity}</p>
@@ -100,7 +104,11 @@ function displayCart() {
         `;
         cartDiv.appendChild(cartItem);
     });
+
+    cartCount.textContent = totalItems; // Update the cart count
+
 }
+
 
 //search
 function setupSearch() {
