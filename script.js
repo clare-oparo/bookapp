@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
 //fetch from Google Books
 
 function fetchBooks() {
-    const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=title';
+    const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=stoicism';
 
     fetch(apiUrl)
         .then(response => response.json())
