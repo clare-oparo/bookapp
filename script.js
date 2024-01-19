@@ -1,30 +1,29 @@
 let cart=[];
 
-document.addEventListener('DOMContentLoaded', function(){
-    fetchBooks();
-    setupSearch()
-})
+document.addEventListener('DOMContentLoaded', function() {
+    fetchBooks("rome"); //default search term
+    setupSearch();
+});
 
-//fetch from Google Books
-
-function fetchBooks() {
-    const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=rome';
+function fetchBooks(searchTerm) {
+    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}`;
 
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const books = data.items.map(item => {
+            const books = data.items ? data.items.map(item => {
                 return {
                     id: item.id,
                     title: item.volumeInfo.title,
                     author: item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'Unknown',
                     coverImageUrl: item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : 'path/to/default-image.jpg'
                 };
-            });
+            }) : [];
             displayBooks(books);
         })
         .catch(error => console.error('Error:', error));
 }
+
 
 //display books on html
 function displayBooks(books) {
@@ -105,11 +104,13 @@ function displayCart() {
 
 //search
 function setupSearch() {
-    document.getElementById('book-search').addEventListener('input', function(e) {
-        const searchTerm = e.target.value.toLowerCase();
-        document.querySelectorAll('.book-card').forEach(bookCard => {
-            const title = bookCard.querySelector('.card-title').textContent.toLowerCase();
-            bookCard.style.display = title.includes(searchTerm) ? '' : 'none';
-        });
+    const searchInput = document.getElementById('book-search');
+    searchInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value;
+        if (searchTerm) {
+            fetchBooks(searchTerm);
+        } else {
+            fetchBooks("rome"); 
+        }
     });
 }
