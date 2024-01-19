@@ -4,14 +4,16 @@ fetch('http://localhost:3000/books')
 .catch(error =>console.error('Error occured:', error))
 
 function displayBooks(books){
-    const container = document.getElementById('books-container'); //container holds all the books
-    container.innerHTML='';
+    const row = document.querySelector('#books-container .row'); //container holds all the books
+    row.innerHTML='';
 
     books.forEach( //all books need their own card to display details, also aesthetics...
         book => {
-            const card = document.createElement('div'); 
+            const col = document.createElement('div'); 
+            col.className = 'col-md-4';
+
+            const card = document.createElement('div');
             card.className = 'card';
-            card.style.width = '18rem';
 
             card.innerHTML = `
             <img src="${book.image}" class="class-img-top" alt="${book.title}">
@@ -24,7 +26,8 @@ function displayBooks(books){
                 <a href=# class="btn btn-primary">Add to Cart</a>
             </div>`;
 
-            container.appendChild(card);
+            col.appendChild(card);
+            row.appendChild(col);
         }
     )
 }
