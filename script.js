@@ -28,11 +28,13 @@ function displayBooks(books){
             card.innerHTML = `
             <img src="${book.image}" class="class-img-top" alt="${book.title}">
             <div class="card-body">
-                <h4 class="card-title">${book.title}</h4>
-                <h5 class="card-author"><em>by ${book.author}</em></h5>
+                <p class="card-title"><strong>${book.title}</strong></p>
+                <p class="card-author"><em>by ${book.author}</em></p>
                 <p class="card-genre"><strong>${book.genre}</strong></p>
                 
-                <p class="card-description">${book.description}</p>
+                <p class="card-description">${shortenText(book.description, 100, book.id)}</p>
+                <button class="btn btn-dark read-more" onclick="toggleReadMore(${book.id})">Read More...</button>
+                <br></br>
                 <p class="btn btn-warning"><strong>${book.price}</strong></p>
                 <a href="#" class="btn btn-info">Add to Cart</a>
             </div>`
@@ -49,6 +51,18 @@ function displayBooks(books){
     );
 
 }
+
+//read more descriptions
+function shortenText(text, maxLength, id) {
+  if (text.length <= maxLength) return text;
+  return text.substr(0, maxLength) + '...' + `<span id="more-${id}" style="display: none;">` + text.substr(maxLength) + '</span>';
+}
+
+function toggleReadMore(id) {
+  const moreText = document.getElementById(`more-${id}`);
+  moreText.style.display = moreText.style.display === 'none' ? '' : 'none';
+}
+
 
 //add to cart
 function addToCart(bookId) {
