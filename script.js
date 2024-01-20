@@ -1,6 +1,8 @@
 let books = [];
 let shoppingCart=[];
 
+//get request
+
 fetch('http://localhost:3000/books')
 .then(response => response.json())
 .then(data => {
@@ -127,6 +129,4 @@ document.getElementById('genre-filter').addEventListener('change', function() {
     
     displayBooks(filteredBooks); // Call displayBooks with the filtered list
   }
-
-
 
