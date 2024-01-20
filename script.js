@@ -1,4 +1,5 @@
 let books = [];
+let shoppingCart=[];
 
 fetch('http://localhost:3000/books')
 .then(response => response.json())
@@ -29,7 +30,7 @@ function displayBooks(books){
                 <p class="card-genre">${book.genre}</p>
                 <p class="card-description">${book.description}</p>
                 <p class="card-price">${book.price}</>
-                <a href=# class="btn btn-primary">Add to Cart</a>
+            
             </div>`;
 
             col.appendChild(card);
