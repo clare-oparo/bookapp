@@ -10,7 +10,9 @@
 <body>
     <section id="navigation"> <!--navbar-->
       <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">bookish</span>
+        
+          <span class="navbar-brand mb-0 h1"><strong>bookish</strong></span>
+      
         <!--add shopping cart icon and dropdown-->
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" id="cart-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -73,9 +75,9 @@
                     
                         </div>
                         <div class="d-flex justify-content-between mt-3">
-                          <button type="button" id="editComment" class="btn btn-success">Edit</button>
+                          <button type="button" id="editComment" class="btn btn-warning">Edit</button>
                           <button type="button" id="submitComment" class="btn btn-success">Submit</button>
-                          <button type="button" id="deleteComment" class="btn btn-success">Delete</button>
+                          <button type="button" id="deleteComment" class="btn btn-danger">Delete</button>
                           
                         </div>
                       </div>
@@ -89,8 +91,8 @@
       </div>
       <div id="commentsContainer" class="container mt-4">
         <div id="reponse-header">
-            <h1>Here's what others think...</h1>
-        </div>
+            <h1>Your comments here ...</h1>
+        </div id="comments-display">
           <!-- Comments will be shown here -->
         </div>
       </div>

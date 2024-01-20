@@ -31,12 +31,13 @@ function displayBooks(books){
                 <h4 class="card-title">${book.title}</h4>
                 <h5 class="card-author"><em>by ${book.author}</em></h5>
                 <p class="card-genre"><strong>${book.genre}</strong></p>
+                
                 <p class="card-description">${book.description}</p>
-                <p class="card-price">${book.price}</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <p class="btn btn-warning"><strong>${book.price}</strong></p>
+                <a href="#" class="btn btn-info">Add to Cart</a>
             </div>`
             //modify add to cart button
-            const addToCartButton = card.querySelector('.btn-primary');
+            const addToCartButton = card.querySelector('.btn-info');
             addToCartButton.dataset.bookId = book.id; //
             addToCartButton.addEventListener('click', function() {
               addToCart(book.id);
