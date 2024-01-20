@@ -9,6 +9,6 @@ Users can also add, edit and delete general comments to the page.
 AUTHOR NAME: Clare Oparo
 
 SETUP
-Bookish uses a RESTful API,HTML, CSS, JavaScript and Bootstrap. It uses data from
+Bookish uses a RESTful API,HTML, CSS, JavaScript and Bootstrap. 
 
 Project Tasks can be found at: https://trello.com/b/WypW8Z7o/bookish
