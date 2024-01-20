@@ -9,7 +9,6 @@ fetch('http://localhost:3000/books')
 .catch(error =>console.error('Error occured:', error))
 
 //display home page
-
 function displayBooks(books){
     const row = document.querySelector('#books-container .row'); //container holds all the books
     row.innerHTML='';
@@ -57,7 +56,41 @@ function addToCart(bookId) {
 
 //update cart display
 function updateCartDisplay(){
-    
+    const cartCount = document.getElementById('cart-count');
+    const cartItems = document.getElementById('cart-items');
+
+    //update cart-count
+    cartCount.textContent = shoppingCart.length;
+
+    //clear existing cart items
+    cartItems.innerHTML = '';
+
+    //add each item to dropdown
+    shoppingCart.forEach(book => {
+        const item = document.createElement('li');
+        item.className = 'dropdown-item';
+        item.textContent = `${book.title} - ${book.price}`;
+        item.appendChild(text);
+
+    // add delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'btn btn-danger btn-sm';
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = () => deleteFromCart(index);
+        item.appendChild(deleteButton);
+
+    // Increase quantity button
+        const increaseButton = document.createElement('button');
+        increaseButton.className = 'btn btn-success btn-sm ms-2';
+        increaseButton.textContent = '+';
+        increaseButton.onclick = () => increaseQuantity(index);
+        item.appendChild(increaseButton);
+
+        
+        cartItems.appendChild(item);
+      });
+      
+  
 }
   
 
