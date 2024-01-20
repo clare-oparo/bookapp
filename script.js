@@ -33,10 +33,10 @@ function displayBooks(books){
                 <p class="card-genre"><strong>${book.genre}</strong></p>
                 
                 <p class="card-description">${shortenText(book.description, 100, book.id)}</p>
-                <button class="btn btn-dark read-more" onclick="toggleReadMore(${book.id})">Read More...</button>
+                <button class="btn btn-dark btn-sm read-more" onclick="toggleReadMore(${book.id})">Read More...</button>
                 <br></br>
-                <p class="btn btn-warning"><strong>${book.price}</strong></p>
-                <a href="#" class="btn btn-info">Add to Cart</a>
+                <p class="btn btn-warning btn-sm"><strong>${book.price}</strong></p>
+                <a href="#" class="btn btn-info btn-sm"><strong>Add to Cart</strong></a>
             </div>`
             //modify add to cart button
             const addToCartButton = card.querySelector('.btn-info');
