@@ -29,8 +29,8 @@ function displayBooks(books){
             <img src="${book.image}" class="class-img-top" alt="${book.title}">
             <div class="card-body">
                 <h4 class="card-title">${book.title}</h4>
-                <h5 class="card-author">by ${book.author}</h5>
-                <p class="card-genre">${book.genre}</p>
+                <h5 class="card-author"><em>by ${book.author}</em></h5>
+                <p class="card-genre"><strong>${book.genre}</strong></p>
                 <p class="card-description">${book.description}</p>
                 <p class="card-price">${book.price}</p>
                 <a href="#" class="btn btn-primary">Add to Cart</a>
