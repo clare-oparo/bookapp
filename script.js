@@ -95,7 +95,7 @@ function updateCartDisplay() {
     item.textContent = `${cartItem.book.title} (Qty: ${cartItem.quantity})`;
 
     const increaseButton = document.createElement('button');
-    increaseButton.className = 'btn btn-success btn-sm ms-2';
+    increaseButton.className = "btn btn-success btn-sm ms-2";
     increaseButton.textContent = '+';
     increaseButton.onclick = () => increaseQuantity(index);
     item.appendChild(increaseButton);
@@ -103,7 +103,7 @@ function updateCartDisplay() {
 
     const deleteButton = document.createElement('button');
     deleteButton.className = 'btn btn-danger btn-sm';
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = '-';
     deleteButton.onclick = () => deleteFromCart(index);
     item.appendChild(deleteButton);
 
