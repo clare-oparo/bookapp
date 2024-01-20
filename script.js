@@ -28,7 +28,7 @@ function displayBooks(books){
                 <h5 class="card-author">by ${book.author}</h5>
                 <p class="card-genre">${book.genre}</p>
                 <p class="card-description">${book.description}</p>
-                <p class="card-price">${book.price}</>
+                <p class="card-price">${book.price}</p>
                 <a href="#" class="btn btn-primary">Add to Cart</a>
             </div>`
             //modify add to cart button
@@ -47,52 +47,68 @@ function displayBooks(books){
 
 //add to cart
 function addToCart(bookId) {
-    const bookToAdd = books.find(book => book.id === bookId);
-    if (bookToAdd) {
-      shoppingCart.push(bookToAdd);
-      updateCartDisplay(); // another function to update the cart display
+  const bookToAdd = books.find(book => book.id === bookId);
+  if (bookToAdd) {
+    const existingItem = shoppingCart.find(item => item.book.id === bookId);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      shoppingCart.push({ book: bookToAdd, quantity: 1 });
     }
+    updateCartDisplay();
   }
+}
+
 
 //update cart display
-function updateCartDisplay(){
-    const cartCount = document.getElementById('cart-count');
-    const cartItems = document.getElementById('cart-items');
+function updateCartDisplay() {
+  const cartCount = document.getElementById('cart-count');
+  const cartItemsElement = document.getElementById('cart-items');
 
-    //update cart-count
-    cartCount.textContent = shoppingCart.length;
+  cartCount.textContent = shoppingCart.reduce((total, item) => total + item.quantity, 0);
 
-    //clear existing cart items
-    cartItems.innerHTML = '';
+  cartItemsElement.innerHTML = '';
 
-    //add each item to dropdown
-    shoppingCart.forEach(book => {
-        const item = document.createElement('li');
-        item.className = 'dropdown-item';
-        item.textContent = `${book.title} - ${book.price}`;
-        item.appendChild(text);
+  shoppingCart.forEach((cartItem, index) => {
+    const item = document.createElement('li');
+    item.className = 'dropdown-item';
+    item.textContent = `${cartItem.book.title} (Qty: ${cartItem.quantity})`;
 
-    // add delete button
-        const deleteButton = document.createElement('button');
-        deleteButton.className = 'btn btn-danger btn-sm';
-        deleteButton.textContent = 'Delete';
-        deleteButton.onclick = () => deleteFromCart(index);
-        item.appendChild(deleteButton);
+    const increaseButton = document.createElement('button');
+    increaseButton.className = 'btn btn-success btn-sm ms-2';
+    increaseButton.textContent = '+';
+    increaseButton.onclick = () => increaseQuantity(index);
+    item.appendChild(increaseButton);
 
-    // Increase quantity button
-        const increaseButton = document.createElement('button');
-        increaseButton.className = 'btn btn-success btn-sm ms-2';
-        increaseButton.textContent = '+';
-        increaseButton.onclick = () => increaseQuantity(index);
-        item.appendChild(increaseButton);
 
-        
-        cartItems.appendChild(item);
-      });
-      
-  
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'btn btn-danger btn-sm';
+    deleteButton.textContent = 'Delete';
+    deleteButton.onclick = () => deleteFromCart(index);
+    item.appendChild(deleteButton);
+
+    
+    cartItemsElement.appendChild(item);
+  });
 }
-  
+
+
+//increase from cart
+function increaseQuantity(index) {
+  shoppingCart[index].quantity++;
+  updateCartDisplay();
+}
+
+//delete from cart
+function deleteFromCart(index) {
+  if (shoppingCart[index].quantity > 1) {
+    shoppingCart[index].quantity--;
+  } else {
+    shoppingCart.splice(index, 1);
+  }
+  updateCartDisplay();
+}
+
 
 //filtering books
 
