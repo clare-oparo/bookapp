@@ -1,5 +1,7 @@
 let books = [];
 let shoppingCart=[];
+let comments = [];
+let currentEditingCommentId = null;
 
 //get request
 
@@ -129,4 +131,69 @@ document.getElementById('genre-filter').addEventListener('change', function() {
     
     displayBooks(filteredBooks); // Call displayBooks with the filtered list
   }
+
+//comments area
+
+function displayComments() {
+  const commentsContainer = document.getElementById('commentsContainer');
+  commentsContainer.innerHTML = '';
+  comments.forEach(comment => {
+    const commentElement = document.createElement('div');
+    commentElement.innerText = comment.text;
+
+    const editButton = document.createElement('button');
+    editButton.innerText = 'Edit';
+    editButton.onclick = () => setCommentToEdit(comment.id);
+    commentElement.appendChild(editButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete';
+    deleteButton.onclick = () => deleteComment(comment.id);
+    commentElement.appendChild(deleteButton);
+
+    commentsContainer.appendChild(commentElement);
+  });
+}
+
+function setCommentToEdit(commentId) {
+  const commentToEdit = comments.find(c => c.id === commentId);
+  if (commentToEdit) {
+    document.getElementById('commentTextArea').value = commentToEdit.text;
+    currentEditingCommentId = commentId;
+  }
+}
+
+function addComment(commentText) {
+  const newComment = {
+    id: Date.now().toString(),
+    text: commentText
+  };
+  comments.push(newComment);
+  displayComments();
+}
+
+function editComment(commentId, newText) {
+  const comment = comments.find(c => c.id === commentId);
+  if (comment) {
+    comment.text = newText;
+    displayComments();
+  }
+}
+
+function deleteComment(commentId) {
+  comments = comments.filter(c => c.id !== commentId);
+  displayComments();
+}
+
+document.getElementById('submitComment').addEventListener('click', function() {
+  const commentText = document.getElementById('commentTextArea').value;
+  if (currentEditingCommentId) {
+    editComment(currentEditingCommentId, commentText);
+    currentEditingCommentId = null; // Clear the current editing ID
+  } else {
+    addComment(commentText);
+  }
+  document.getElementById('commentTextArea').value = ''; // Clear the textarea
+});
+
 
