@@ -7,6 +7,7 @@ fetch('http://localhost:3000/books')
     displayBooks(books)})
 .catch(error =>console.error('Error occured:', error))
 
+//display home page
 
 function displayBooks(books){
     const row = document.querySelector('#books-container .row'); //container holds all the books
@@ -34,20 +35,27 @@ function displayBooks(books){
             col.appendChild(card);
             row.appendChild(col);
         }
-    )
+    );
+
 }
+
+//filtering books
 
 document.getElementById('genre-filter').addEventListener('change', function() {
     applyFilter();
   });
-
-function applyFilter(){
+  
+  function applyFilter() {
     const selectedGenre = document.getElementById('genre-filter').value;
-    let filteredBooks = books;
-    //filter by genre
-    if (selectedGenre !== 'all'){
-        filteredBooks = filteredBooks.filter(book => book.genre===selectedGenre);
+    let filteredBooks = books; // Use the 'books' array
+  
+    if (selectedGenre !== 'all') {
+      filteredBooks = filteredBooks.filter(book => book.genre === selectedGenre);
     }
-}
+    
+    
+    displayBooks(filteredBooks); // Call displayBooks with the filtered list
+  }
 
-displayBooks(filteredBooks);
+
+
