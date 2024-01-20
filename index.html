@@ -11,8 +11,16 @@
     <section id="navigation"> <!--navbar-->
       <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">bookish</span>
-        <!--add shopping cart icon-->
-        <i class="fa-solid fa-cart-plus"></i>
+        <!--add shopping cart icon and dropdown-->
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="cart-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="badge bg-secondary">0</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="cart-dropdown" id="cart-items">
+            <!-- Cart items will be listed here -->
+          </ul>
+        </div>
       </nav>
     </section>
     <section id="filter"> <!--filtering genres-->
