@@ -20,7 +20,7 @@ function displayBooks(books){
     books.forEach( //all books need their own card to display details, also aesthetics...
         book => {
             const col = document.createElement('div'); 
-            col.className = 'col-md-4';
+            col.className = 'col-sm-6';
 
             const card = document.createElement('div');
             card.className = 'card';
@@ -32,10 +32,11 @@ function displayBooks(books){
                 <p class="card-author"><em>by ${book.author}</em></p>
                 <p class="card-genre"><strong>${book.genre}</strong></p>
                 
-                <p class="card-description">${shortenText(book.description, 100, book.id)}</p>
-                <button class="btn btn-dark btn-sm read-more" onclick="toggleReadMore(${book.id})">Read More...</button>
+                <p class="card-description">${shortenText(book.description, 0, book.id)}</p>
+                <button class="btn btn-dark btn-sm read-more" onclick="toggleReadMore(${book.id})">Read Description</button>
                 <br></br>
                 <p class="btn btn-warning btn-sm"><strong>${book.price}</strong></p>
+                <br></br>
                 <a href="#" class="btn btn-info btn-sm"><strong>Add to Cart</strong></a>
             </div>`
             //modify add to cart button
