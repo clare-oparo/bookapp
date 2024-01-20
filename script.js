@@ -30,8 +30,14 @@ function displayBooks(books){
                 <p class="card-genre">${book.genre}</p>
                 <p class="card-description">${book.description}</p>
                 <p class="card-price">${book.price}</>
-            
-            </div>`;
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>`
+            //modify add to cart button
+            const addToCartButton = card.querySelector('.btn-primary');
+            addToCartButton.dataset.bookId = book.id; //
+            addToCartButton.addEventListener('click', function() {
+              addToCart(book.id);
+            });
 
             col.appendChild(card);
             row.appendChild(col);
@@ -39,6 +45,21 @@ function displayBooks(books){
     );
 
 }
+
+//add to cart
+function addToCart(bookId) {
+    const bookToAdd = books.find(book => book.id === bookId);
+    if (bookToAdd) {
+      shoppingCart.push(bookToAdd);
+      updateCartDisplay(); // another function to update the cart display
+    }
+  }
+
+//update cart display
+function updateCartDisplay(){
+    
+}
+  
 
 //filtering books
 
